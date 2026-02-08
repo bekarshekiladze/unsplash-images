@@ -6,7 +6,7 @@ function ImageComponent({ item }) {
 
   const { alt_description, urls, blur_hash } = item;
 
-  const imageUrl = urls.regular; //regular, full, thumb, small
+  const imageUrl = urls.small; //regular, full, thumb, small
 
   const isBlurHashValid =
     typeof blur_hash === "string" && blur_hash.length >= 6;
