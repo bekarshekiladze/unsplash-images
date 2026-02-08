@@ -2,6 +2,7 @@ import { fetchPhotos } from "../utils/axios";
 import { useQuery } from "@tanstack/react-query";
 import ImageComponent from "./ImageComponent";
 import { useSearchContext } from "../Context/SearchContext";
+import { DEFAULT_QUERY } from "../constants";
 
 function Gallery() {
   const { searchInput } = useSearchContext();
@@ -12,7 +13,7 @@ function Gallery() {
       const {
         data: { results: data },
       } = await fetchPhotos.get("/", {
-        params: { query: searchInput || "cat" },
+        params: { query: searchInput || DEFAULT_QUERY },
       });
       return data;
     },

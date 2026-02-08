@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useSearchContext } from "../Context/SearchContext";
+import { DEFAULT_QUERY } from "../constants";
 
 function SearchForm() {
   const [text, setText] = useState("");
@@ -23,7 +24,7 @@ function SearchForm() {
           type="text"
           className="form-input search-input"
           name="search"
-          placeholder="cat"
+          placeholder={DEFAULT_QUERY}
           value={text}
           onChange={(e) => {
             setText(e.target.value);
