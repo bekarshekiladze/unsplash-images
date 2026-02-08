@@ -1,8 +1,8 @@
 import { IoSunny, IoMoon } from "react-icons/io5";
-import { useGlobalContext } from "../Context";
+import { useThemeContext } from "../Context/ThemeContext";
 
 function ThemeToggle() {
-  const { isDarkTheme, toggleDarkTheme } = useGlobalContext();
+  const { isDarkTheme, toggleDarkTheme } = useThemeContext();
 
   return (
     <section className="toggle-container">

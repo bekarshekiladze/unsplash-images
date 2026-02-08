@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { useGlobalContext } from "../Context";
+import { useSearchContext } from "../Context/SearchContext";
 
 function SearchForm() {
   const [text, setText] = useState("");
-  const { setSearchInput } = useGlobalContext();
+  const { setSearchInput } = useSearchContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
